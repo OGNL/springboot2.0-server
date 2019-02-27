@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+       
+	<dubbo:application name="microservice-provider1" owner="dubbo-provider1" />
+	<!-- 定义 zookeeper 注册中心地址及协议 -->
+	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+	<!-- 定义 Dubbo协议名称及使用的端口dubbo协议缺省端口为 20880如果配置为 -1 或者没有配置 port则会分配一个没有被占用的端口 -->
+	<dubbo:protocol name="dubbo" port="20880" />
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:service interface="com.example.server.service.UserService" ref="userService" timeout="8000" protocol="dubbo" />
+
+</beans>

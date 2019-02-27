@@ -1,0 +1,53 @@
+spring:
+  profiles:
+    active: dev
+---
+################# development environment #################
+spring:
+  profiles: dev
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/testdb?characterEncoding=utf8&useSSL=true
+      username: root
+      password: root
+  #    primary:
+  #      driver-class-name: com.mysql.jdbc.Driver
+  #      url: jdbc:mysql://192.168.11.131:3306/mydb
+  #      username: wls
+  #      password: Wls141215!
+  #    secondary:
+  #      driver-class-name: com.mysql.jdbc.Driver
+  #      url: jdbc:mysql://192.168.11.131:3306/shopmall
+  #      username: wls
+  #      password: Wls141215!
+
+server:
+  port: 8166
+---
+################# test environment #################
+spring:
+  profiles: test
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/testdb?characterEncoding=utf8&useSSL=true
+      username: root
+      password: root
+
+server:
+  port: 8186
+---
+################# production environment #################
+spring:
+  profiles: prod
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #这里是配置druid连接池，以下都是druid的配置信息
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/testdb?characterEncoding=utf8&useSSL=true
+    username: root
+    password: root
+
+server:
+  port: 8196
+
