@@ -1,10 +1,10 @@
-package com.example.server.dao;
+package com.example.service;
 
-import com.example.server.entity.UserInfo;
+import com.example.entity.UserInfo;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserService {
 
     Integer saveUser(UserInfo userInfo);
 

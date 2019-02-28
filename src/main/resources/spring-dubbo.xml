@@ -12,6 +12,6 @@
 	<!-- 定义 Dubbo协议名称及使用的端口dubbo协议缺省端口为 20880如果配置为 -1 或者没有配置 port则会分配一个没有被占用的端口 -->
 	<dubbo:protocol name="dubbo" port="20880" />
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="com.example.server.service.UserService" ref="userService" timeout="8000" protocol="dubbo" />
+	<dubbo:service interface="com.example.service.UserService" ref="userService"  timeout="8000"/>
 
 </beans>

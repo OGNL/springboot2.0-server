@@ -1,7 +1,7 @@
-package com.example.server.dao.impl;
+package com.example.dao.impl;
 
-import com.example.server.dao.UserDao;
-import com.example.server.entity.UserInfo;
+import com.example.dao.UserDao;
+import com.example.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

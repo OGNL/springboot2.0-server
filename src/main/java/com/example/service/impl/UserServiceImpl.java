@@ -1,8 +1,8 @@
-package com.example.server.service.impl;
+package com.example.service.impl;
 
-import com.example.server.dao.UserDao;
-import com.example.server.entity.UserInfo;
-import com.example.server.service.UserService;
+import com.example.entity.UserInfo;
+import com.example.dao.UserDao;
+import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
